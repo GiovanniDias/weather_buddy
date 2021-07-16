@@ -31,15 +31,28 @@ header{
   height: 500px;
 }
 
-.App-link {
-  color: #61dafb;
+input[type=text]{
+  border-width: 0;
+  border-bottom-width: thin;
+  margin: 0px 5px 0px 5px;
+  font-size: 25px;
+  min-width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus{
+  outline: none;
 }
+
+.content-text{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 25px;
+}
+
+/* TODO: Add style for the unstyled components below:
+*   - Card
+*   - Card Array Container
+*   - Not Found Message
+*   - Results
+*/
