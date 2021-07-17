@@ -2,14 +2,10 @@
   text-align: center;
 }
 
-header{
-  display: flex;
-  justify-content: center;
-}
-
 .header{
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 .header-content{
@@ -27,9 +23,22 @@ header{
 
 .container{
   display: flex;
+  flex-flow: wrap;
   justify-content: center;
-  align-items: center;
-  height: 500px;
+  align-content: space-around;
+  min-height: 500px;
+}
+
+.container-content{
+  width: 65%;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-content: space-around;
 }
 
 input[type=text]{
@@ -37,7 +46,8 @@ input[type=text]{
   border-bottom-width: thin;
   margin: 0px 5px 0px 5px;
   font-size: 25px;
-  min-width: 200px;
+  min-width: 120px;
+  width: 40%;
 }
 
 input:focus{
@@ -46,6 +56,13 @@ input:focus{
 
 .content-text{
   font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center safe;
+}
+
+.tiny-text{
+  font-size: 2ch !important;
 }
 
 .content-not-found{
@@ -79,8 +96,8 @@ input:focus{
 .card-container{
   display: flex;
   flex-flow: wrap;
-  align-content: space-around;
-  justify-content: space-around;
-  padding: 10px;
+  align-content: center;
+  justify-content: center;
   background-color: #eff5ff;
+  padding: 10px;
 }
