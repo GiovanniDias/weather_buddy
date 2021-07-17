@@ -14,6 +14,7 @@ header{
 
 .header-content{
   font-size: 20px;
+  font-weight: 600;
   padding: 10px;
   border-width: 0;
   border-bottom-width: thin;
@@ -44,15 +45,42 @@ input:focus{
 }
 
 .content-text{
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
   font-size: 25px;
 }
 
-/* TODO: Add style for the unstyled components below:
-*   - Card
-*   - Card Array Container
-*   - Not Found Message
-*   - Results
-*/
+.content-not-found{
+  font-size: 30px;
+  font-weight: 500;
+  color: #d22;
+}
+
+.card{
+  width: 140px;
+  height: 140px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 3px 3px 0px lightgray;
+  font-weight: 500;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+}
+
+.card-section{
+  width: 100%;
+}
+
+.card-content{
+  font-size: 40px;
+}
+
+.card-container{
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #eff5ff;
+}

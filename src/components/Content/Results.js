@@ -2,9 +2,9 @@ import React from 'react'
 import Card from '../Card'
 
 export const OldResults = ({array}) => (
-  <div>
+  <div className="card-container">
     {array.map(data => (
-      <Card />
+      <Card {...data}/>
     ))}
   </div>
 )
@@ -14,7 +14,7 @@ OldResults.defaultProps = {
 }
 
 const MainResult = ({data}) => (
-  <Card />
+  <Card {...data}/>
 )
 
 export default MainResult

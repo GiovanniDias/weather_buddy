@@ -4,23 +4,23 @@ import NotFoundMessage from './NotFoundMessage'
 import MainResult, {OldResults} from './Results'
 
 export const Content = () => {
-  const [data, setData] = useState()
-  const [isFirstRequest, setIsFirstRequest] = useState(true)
+  const [data, setData] = useState({title: "City Name", content: "22ºC", footer: "sunny"})
+  const [isFirstRequest, setIsFirstRequest] = useState(false)
 
   return (
     <div>
-      <InputMessage />
+      <InputMessage/>
       { 
         !isFirstRequest &&
         (
           !data
           ?<NotFoundMessage />
-          :<MainResult />
+          :<MainResult data={data}/>
         )
       }
       {
         !isFirstRequest &&
-        <OldResults />
+        <OldResults array={[data, data, data, data, data]}/>
       }
     </div>
   )
