@@ -28,7 +28,7 @@ const InputMessage = ({isFirstRequest, setIsFirstRequest, setResponse}) => {
   
   return (
     <div className={isFirstRequest ? "content-text" : "content-text tiny-text"}>
-      <spam>How is the weather in</spam>
+      <span>How is the weather in</span>
       <input
         className={isFirstRequest ? "" : "tiny-text"}
         autoFocus
@@ -38,7 +38,7 @@ const InputMessage = ({isFirstRequest, setIsFirstRequest, setResponse}) => {
         onBlur={handleBlur}
         onKeyPress={handleKeyPress}
       />
-      <spam>now?</spam>
+      <span>now?</span>
     </div>
   )
 }

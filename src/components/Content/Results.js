@@ -3,8 +3,8 @@ import Card from '../Card'
 
 export const OldResults = ({array}) => (
   <div className="card-container">
-    {array.map(data => (
-      <Card {...data}/>
+    {array.map((data, index) => (
+      <Card key={index} {...data}/>
     ))}
   </div>
 )

@@ -1,14 +1,22 @@
-import {formatData} from '../utils'
+import adapter from '../adapters'
+import { formatData } from '../utils'
 
-const info = {name: "City Name", main: { temp: "22ºC" }, weather: [{ main:"Sunny" }]}
-const infoArray = [info, info, info, info, info]
-
-export const getCityWeather = async () => {
-  const data = formatData(info)
-  return data
+export const getCityWeather = async (cityName) => {
+  try{
+    const url = `weather/${cityName}`
+    const data = (await adapter.get(url)).data
+    return formatData(data)
+  }catch(e){
+    console.log(e)
+  }
 }
 
-export const getWeatherInfo = async () => {
-  const data = infoArray.map(item => formatData(item))
-  return data
+export const getWeatherInfo = async (numToRetrieve = 5) => {
+  try{
+    const url = `weather?max=${numToRetrieve}`
+    const data = (await adapter.get(url)).data.data
+    return data.map(item => formatData(item))
+  } catch(e) {
+    console.log(e)
+  }
 }

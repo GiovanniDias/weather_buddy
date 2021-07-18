@@ -11,7 +11,11 @@ export const Content = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      if(!isFirstRequest) setArray(await getWeatherInfo())
+      try{
+        if(!isFirstRequest) setArray(await getWeatherInfo())
+      } catch (e) {
+        console.log(e)
+      }
     }
     fetchData()
   }, [isFirstRequest])
