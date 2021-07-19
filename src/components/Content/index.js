@@ -12,13 +12,13 @@ export const Content = () => {
   useEffect(() => {
     const fetchData = async () => {
       try{
-        if(!isFirstRequest) setArray(await getWeatherInfo())
+        setArray(await getWeatherInfo())
       } catch (e) {
         console.log(e)
       }
     }
     fetchData()
-  }, [isFirstRequest])
+  }, [data])
 
   return (
     <div className="container container-content">
