@@ -1,0 +1,8 @@
+version: '3.5'
+services:
+  weather-buddy:
+    container_name: weather-buddy
+    build:
+      context: .
+    ports:
+      - 3008:80

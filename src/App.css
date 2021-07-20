@@ -2,37 +2,102 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-content{
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-width: 0;
+  border-bottom-width: thin;
+  border-color: black;
+  border-style: solid;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: space-around;
+  min-height: 500px;
+}
+
+.container-content{
+  width: 65%;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+input[type=text]{
+  border-width: 0;
+  border-bottom-width: thin;
+  margin: 0px 5px 0px 5px;
+  font-size: 25px;
+  min-width: 120px;
+  width: 40%;
+}
+
+input:focus{
+  outline: none;
+}
+
+.content-text{
+  font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center safe;
+}
+
+.tiny-text{
+  font-size: 2ch !important;
+}
+
+.content-not-found{
+  font-size: 30px;
+  font-weight: 500;
+  color: #d22;
+}
+
+.card{
+  width: 140px;
+  height: 140px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 3px 3px 0px lightgray;
+  font-weight: 500;
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+}
+
+.card-section{
+  width: 100%;
+}
+
+.card-content{
+  font-size: 40px;
+}
+
+.card-container{
+  display: flex;
+  flex-flow: wrap;
+  align-content: center;
+  justify-content: center;
+  background-color: #eff5ff;
+  padding: 10px;
 }
