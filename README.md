@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+<h1 id="about">Weather Buddy</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application to search for weather information by city.
 
-## Available Scripts
+<img src="https://img.shields.io/github/issues/GiovanniDias/weather_buddy_api"/>
+<img src="https://img.shields.io/github/stars/GiovanniDias/weather_buddy_api"/>
+<img src="https://img.shields.io/github/license/GiovanniDias/weather_buddy_api"/>
+<img src="https://img.shields.io/badge/react-16.+-blue"/>
 
-In the project directory, you can run:
+<h2 id="table-of-contents">Table of Contents</h2>
 
-### `yarn start`
+* [About](#about)
+* [Table of Contents](#table-of-contents)
+* [Features](#features)
+* [How to use](#how-to-use)
+    * [Requirements](#requirements)
+    * [Installation](#installation)
+    * [Setting Application](#setting-app)
+    * [Running Application](#running-app)
+        * [Using localhost](#localhost-approach)
+        * [Using Docker](#docker-approach)
+* [Endpoints](#endpoints)
+* [Tests](#tests)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3 align="center">🚧 Building... 🚧</h3>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h2 id="features">Features</h2>
 
-### `yarn test`
+- [x] Design components
+- [x] Set data flow between components and events
+- [x] Search for city weather info
+- [x] Show last maximum five cities information.
+- [x] Dockerize application
+- [ ] Unit test
+- [ ] Deploy on Vercel or Firebase Hosting
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2 id="how-to-use">How to use</h2>
 
-### `yarn build`
+<h3 id="requirements">Requirements</h3>
+You may need to have installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Git](https://git-scm.com/downloads)
+- [Node](https://nodejs.org/en/download)
+- [Yarn](https://yarnpkg.com/getting-started/install)
+- [Docker](https://www.docker.com/products/docker-desktop) e [Docker compose](https://docs.docker.com/compose/install/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3 id="installation">Installation</h3>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Download Zip](https://github.com/GiovanniDias/weather_buddy/archive/refs/heads/master.zip) or use git to clone it using the command
 
-### `yarn eject`
+    # https
+    $ git clone https://github.com/GiovanniDias/weather_buddy.git
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    # ssh
+    $ git clone git@github.com:GiovanniDias/weather_buddy.git
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once you got the source code, it's time to set up the project to running.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h3 id="setting-app">Setting application</h3>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+On the project root, run ```yarn``` on terminal to install node_modules based on package.json
 
-## Learn More
+    $ yarn
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Once it is finished you may run the application on localhost or using Docker.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h3 id="running-app">Running application</h3>
 
-### Code Splitting
+To run application over **localhost**, execute the code below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    $ yarn start
 
-### Analyzing the Bundle Size
+http://localhost:3000 to access it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**<h4 id="docker-approach">Using Docker</h4>**
 
-### Making a Progressive Web App
+For running this application with Docker, use:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    $ docker-compose up --build -d
+    # or
+    $ docker compose up --build -d
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+depending on Docker version your local machine is using.
